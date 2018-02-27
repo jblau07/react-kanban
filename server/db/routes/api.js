@@ -50,16 +50,18 @@ router.route('/:id')
 
 router.route('/')
   .get((req, res) => {
+    console.log('getting')
     return new Card()
     .fetchAll()
     .then(cards => {
-      return res.json(cards)
+      return res.json(cards.models)
     })
     .catch(err => {
       return res.json({message: err.message})
     })
   })
   .post((req, res) => {
+    console.log('posting')
     let data = {
       title, priority, status, created_by, assigned_to
     } = req.body
