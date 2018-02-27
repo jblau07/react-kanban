@@ -2,4 +2,48 @@ body {
   background-color: blue;
 }
 
+.App-title {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.Main {
+  display: flex;
+  .Queue {
+    border-right: 6px solid black;
+  }
+  .In-Progress {
+    padding-left: 170px;
+    border-right: 6px solid black;
+
+  }
+  .Done {
+    padding-left: 170px;
+    border-right: 6px solid black;
+
+  }
+}
+
+.card {
+  // display: flex;
+  border: 6px solid black;
+}
+
+
+// .App {
+//   display: flex;
+//   // flex-direction: column;
+//   .card {
+//     // display: flex;
+//     border-style: solid;
+//     border-color: black;
+//     width: 200px
+//   }
+//   .In-Progress {
+//     display: flex;
+//     flex-direction: row
+//   }
+// }
+
 //import in order of importance 

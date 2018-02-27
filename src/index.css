@@ -1,2 +1,20 @@
 body {
   background-color: blue; }
+
+.App-title {
+  display: flex;
+  flex-direction: column; }
+
+.Main {
+  display: flex; }
+  .Main .Queue {
+    border-right: 6px solid black; }
+  .Main .In-Progress {
+    padding-left: 170px;
+    border-right: 6px solid black; }
+  .Main .Done {
+    padding-left: 170px;
+    border-right: 6px solid black; }
+
+.card {
+  border: 6px solid black; }
