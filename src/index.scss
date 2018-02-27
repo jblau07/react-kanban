@@ -1,5 +1,5 @@
 body {
-  background-color: blue;
+  background-color: white;
 }
 
 .App-title {
@@ -10,25 +10,28 @@ body {
 
 .Main {
   display: flex;
-  .Queue {
-    border-right: 6px solid black;
+  
+  .QueueColumn {
+    border-right: 6px solid green;
   }
-  .In-Progress {
-    padding-left: 170px;
-    border-right: 6px solid black;
+  .In-ProgressColumn {
+    display: flex;
+    padding-right: 170px;
+    border-right: 6px solid green;
 
   }
-  .Done {
+  .DoneColumn {
+    display: flex;
     padding-left: 170px;
-    border-right: 6px solid black;
+    border-right: 6px solid green;
 
+  }
+  .card {
+    border: 6px solid black;
+    width: 150px;
   }
 }
 
-.card {
-  // display: flex;
-  border: 6px solid black;
-}
 
 
 // .App {
