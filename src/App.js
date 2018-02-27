@@ -23,16 +23,24 @@ class App extends Component {
         <NewCard/>
       </header>
         <div className="Main">
-          <div className="Queue">
+          <div className="QueueColumn">
           <h1>Queue</h1>
           <CardList
-          cards={this.props.cards} />
+            cards={this.props.cards} status='queue'
+          />
           </div>
-          <div className="In-Progress">
+          <div className="In-ProgressColumn">
           <h1>In-Progress</h1>
+          <CardList
+          cards={this.props.cards} status="in-progress"
+          />
           </div>
-          <div className="Done">
+          <div className="DoneColumn">
           <h1>Done</h1>
+          <CardList
+          cards={this.props.cards} status="done"
+          />
+
           </div>        
         </div>
       </div>
