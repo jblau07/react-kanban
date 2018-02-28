@@ -1,5 +1,5 @@
 import React from 'react';
-import CardListItem from './CardListItem';
+import CardListItem from '../containers/CardListItem';
 
 const CardList = ({ cards, status }) => {
   return (
