@@ -1,17 +1,17 @@
-import { LOAD_CARDS } from '../actions';
-import { ADD_CARD } from '../actions';
+import { LOAD_CARDS, SET_EDIT_ID } from '../actions';
 
 const initialState = {
-  cards: []
+  cards: [],
+  editId: false
 }
  
 export default (state = initialState, action) => {
+  console.log('action', action)
   switch (action.type) {
     case LOAD_CARDS:
       return {...state, cards: action.cards}
-    case ADD_CARD:
-      const updatedCards = state.cards.concat(action.card);
-      return { ...state, cards: updatedCards };
+    case SET_EDIT_ID:
+      return {...state, editId: action.editId}
     default:
       return state;
   }
