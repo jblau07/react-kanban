@@ -2,8 +2,15 @@ import 'whatwg-fetch';
 
 const KANBAN_DB = '/api/kanban';
 
-export const ADD_CARD = 'ADD_CARD';
 export const LOAD_CARDS = 'LOAD_CARDS';
+export const SET_EDIT_ID = 'SET_EDIT_ID';
+
+export const setEditId = (id) => {
+  return  {
+    type: SET_EDIT_ID,
+    editId: id
+  }
+}
 
 export const addCard = (card) => {
 
@@ -15,7 +22,6 @@ export const addCard = (card) => {
       created_by: card.created_by,
       assigned_to: card.assigned_to
     }
-    console.log('body', body);
     return fetch(KANBAN_DB, {
       method: 'POST',
       headers: {
@@ -24,14 +30,12 @@ export const addCard = (card) => {
       body: JSON.stringify(body)
     })
       .then(response => {
-        console.log('add', response)
         return response.json()
       })
       .then(card => {
-        return dispatch({
-          type: ADD_CARD,
-          card: card
-        })
+        return dispatch(
+          loadCards()
+        )
       })
 
       .catch(err => {
@@ -40,10 +44,7 @@ export const addCard = (card) => {
   };
 }
 
-
-
 export const loadCards = () => {
-  console.log('yoyoy');
   return dispatch => {
     return fetch(KANBAN_DB)
       .then(response => {
@@ -66,4 +67,53 @@ export const loadCards = () => {
         });
       });
   }
+}
+
+export const updateCard = (card) => {
+  return dispatch => {
+    const body = {
+      title: card.title,
+      priority: card.priority,
+      status: card.status,
+      created_by: card.created_by,
+      assigned_to: card.assigned_to
+    }
+    return fetch(`${KANBAN_DB}/${card.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+      .then(response => {
+        return response.json()
+      })
+      .then(card => {
+        dispatch({
+          type: SET_EDIT_ID,
+          editId: false
+        })
+        return dispatch(
+          loadCards()
+        )
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+}
+export const deleteCard = (id) => {
+  return dispatch => {
+    return fetch (`${KANBAN_DB}/${id}`, {
+    method: 'DELETE'
+  })
+  .then(result => {
+    return dispatch(
+     loadCards()
+    )
+  })
+  .catch(err => {
+    console.log('error', err)
+  })
+  }  
 }
