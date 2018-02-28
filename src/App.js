@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './index.css';
 import { loadCards } from '../src/actions/index';
-import CardList from '../src/components/CardList';
-import NewCard from '../src/components/NewCard';
+import CardList from './components/CardList';
+import NewCard from './containers/NewCard';
+import UpdateCard from './containers/UpdateCard';
 
 class App extends Component {
   constructor(props) {
@@ -21,6 +22,8 @@ class App extends Component {
       <header className="App-title">
       <h1>Kanban  </h1>
         <NewCard/>
+        <UpdateCard 
+       />
       </header>
         <div className="Main">
           <div className="QueueColumn">
@@ -32,15 +35,14 @@ class App extends Component {
           <div className="In-ProgressColumn">
           <h1>In-Progress</h1>
           <CardList
-          cards={this.props.cards} status="in-progress"
+            cards={this.props.cards} status="in-progress"
           />
           </div>
           <div className="DoneColumn">
           <h1>Done</h1>
           <CardList
-          cards={this.props.cards} status="done"
+            cards={this.props.cards} status="done"
           />
-
           </div>        
         </div>
       </div>
@@ -50,7 +52,8 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    cards: state.cards.cards
+    cards: state.cards.cards,
+    editId: state.cards.editId
   }
 }
 
