@@ -17,20 +17,14 @@ class UpdateCard extends Component {
     if (nextProps.editId !== this.props.editId) {
       this.props.cards.filter(card => {
         return card.id === nextProps.editId
-
-        // return card.id === parseInt(nextProps.editId)
       })
       .map((card) => {
         return this.setState({...card})
       })
     }
   }
-  // componentWillMount() {
-  //   console.log('editid', this.props.editId)
-  // }
 
   handleOnChange(event) {
-
     this.setState({[event.target.name] : event.target.value})
   }
 
