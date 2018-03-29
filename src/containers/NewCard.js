@@ -24,10 +24,10 @@ class NewCard extends Component {
 
   render() {
     return (
-      <div>
+      <div className="new-card-form">
         <br />
         <form onSubmit={this.handleOnSubmit}>
-        <h3>New Task</h3>
+        <h3>New Card</h3>
           <input type="text"
             name="title"
             placeholder="title"
