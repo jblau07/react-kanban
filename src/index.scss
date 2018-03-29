@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: cornflowerblue;
 }
 
 .App-title {
@@ -7,46 +7,69 @@ body {
   flex-direction: column;
 }
 
+.new-card-form {
+  margin-bottom: 20px;
+}
 
 .Main {
   display: flex;
+  justify-content: center;
   
   .QueueColumn {
-    border-right: 6px solid green;
-  }
-  .In-ProgressColumn {
-    display: flex;
-    padding-right: 170px;
-    border-right: 6px solid green;
+    padding-right: 100px;
+    border-right: 6px solid black;
 
-  }
-  .DoneColumn {
-    display: flex;
-    padding-left: 170px;
-    border-right: 6px solid green;
-
-  }
-  .card {
-    border: 6px solid black;
-    width: 150px;
-  }
+    .queue-header {
+      text-align: center;
+    }
 }
 
+  .In-ProgressColumn {
+    padding-left: 100px;
+    padding-right: 100px;
+    border-right: 6px solid black;
+      .in-progress-header {
+        text-align: center;
+      }
+  }
+  .DoneColumn {
+    padding-left: 100px;
+    padding-right: 100px;
+    border-right: 6px solid black;
+      .done-header {
+        text-align: center;
+      }
+  }
+
+  .card {
+    height: 160px;
+    background-color: azure;
+    align-items: center;
+    border: 3px solid black;
+    margin-bottom: 20px;
+    width: 250px;
+
+    .attribute {
+      padding-left: 8px;
+    }
+
+    .edit-delete-buttons {
+      padding-top: 15px;
+      display: flex;
+      justify-content: center;
+
+      .edit-button {
+        padding: 10px 24px;
+        text-align: center;
+      }
+  
+      .delete-button {
+        padding: 10px 24px;
+        text-align: center
+      }
 
 
-// .App {
-//   display: flex;
-//   // flex-direction: column;
-//   .card {
-//     // display: flex;
-//     border-style: solid;
-//     border-color: black;
-//     width: 200px
-//   }
-//   .In-Progress {
-//     display: flex;
-//     flex-direction: row
-//   }
-// }
+    }
 
-//import in order of importance 
+  }
+}
