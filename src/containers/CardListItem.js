@@ -22,13 +22,14 @@ class CardListItem extends Component {
     const { title, priority, created_by, assigned_to } = this.props
       return (
         <div className="card">
-          <div className="attribute">Title:{title}</div>
-          <div className="attribute">Priority:{priority}</div>
-          <div className="attribute">Created By:{created_by}</div>
-          <div className="attribute">Assigned To:{assigned_to}</div>
-          <button onClick={this.handleOnEdit}>Edit</button> 
-          <button onClick={this.handleOnDelete}>Delete</button> 
-
+          <div className="attribute">Title: {title}</div>
+          <div className="attribute">Priority: {priority}</div>
+          <div className="attribute">Created By: {created_by}</div>
+          <div className="attribute">Assigned To: {assigned_to}</div>
+          <div className="edit-delete-buttons">
+          <button className="edit-button" onClick={this.handleOnEdit}>Edit</button> 
+          <button className="delete-button" onClick={this.handleOnDelete}>Delete</button> 
+          </div>
         </div>
       )
     }
