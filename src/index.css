@@ -1,9 +1,22 @@
 body {
-  background-color: cornflowerblue; }
+  background: linear-gradient(#a8e9ff, #052afc);
+  font-family: "Coustard", serif; }
 
 .App-title {
+  padding-top: 8px;
   display: flex;
   flex-direction: column; }
+  .App-title h1 {
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; }
+  .App-title .update-card-form {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    flex-flow: column;
+    flex-direction: column; }
 
 .new-card-form {
   margin-bottom: 20px; }
@@ -12,7 +25,7 @@ body {
   display: flex;
   justify-content: center; }
   .Main .QueueColumn {
-    padding-right: 100px;
+    padding-right: 60px;
     border-right: 6px solid black; }
     .Main .QueueColumn .queue-header {
       text-align: center; }
@@ -29,12 +42,14 @@ body {
     .Main .DoneColumn .done-header {
       text-align: center; }
   .Main .card {
-    height: 160px;
+    height: 170px;
     background-color: azure;
     align-items: center;
     border: 3px solid black;
+    padding-top: 8px;
     margin-bottom: 20px;
-    width: 250px; }
+    width: 280px;
+    box-shadow: 5px 10px 8px #33334d; }
     .Main .card .attribute {
       padding-left: 8px; }
     .Main .card .edit-delete-buttons {
@@ -43,7 +58,13 @@ body {
       justify-content: center; }
       .Main .card .edit-delete-buttons .edit-button {
         padding: 10px 24px;
-        text-align: center; }
+        text-align: center;
+        font-family: "Coustard", serif; }
+      .Main .card .edit-delete-buttons .edit-button:hover {
+        background-color: #66CDAA; }
       .Main .card .edit-delete-buttons .delete-button {
         padding: 10px 24px;
-        text-align: center; }
+        text-align: center;
+        font-family: "Coustard", serif; }
+      .Main .card .edit-delete-buttons .delete-button:hover {
+        background-color: #66CDAA; }
