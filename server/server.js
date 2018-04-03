@@ -15,13 +15,6 @@ app.get('/', (req, res) => {
 
 app.use('/api/kanban', apiRoute);
 
-// app.get('/*', (req, res) => {
-//   let options = {
-//     root: __dirname + '/public'
-//   };
-//   res.sendFile('index.html', options);
-// })
-
 app.listen(PORT, () => {
   console.log(`Server is listening on ${PORT}`)
 })
