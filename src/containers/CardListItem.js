@@ -7,7 +7,6 @@ class CardListItem extends Component {
     super (props);
     this.handleOnEdit = this.handleOnEdit.bind(this);
     this.handleOnDelete = this.handleOnDelete.bind(this);
-
   }
   
   handleOnEdit() {
@@ -27,7 +26,7 @@ class CardListItem extends Component {
           <div className="attribute">Created By: {created_by}</div>
           <div className="attribute">Assigned To: {assigned_to}</div>
           <div className="edit-delete-buttons">
-          <button className="edit-button" onClick={this.handleOnEdit}>Edit</button> 
+          <button className="edit-button" onClick={this.handleOnEdit}>Edit/Move</button> 
           <button className="delete-button" onClick={this.handleOnDelete}>Delete</button> 
           </div>
         </div>

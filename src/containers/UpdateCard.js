@@ -40,7 +40,7 @@ class UpdateCard extends Component {
   render() {  
     //if editid is set to a number
     let editForm = 
-      <div>
+      <div className="update-card-form">
         <br />
         <form onSubmit={this.handleOnSubmit}>
         <h3>Update Task</h3>
@@ -83,8 +83,8 @@ class UpdateCard extends Component {
             onChange={this.handleOnChange}
           />
           <input type="submit" value="Submit"/>
-        </form>
         <button onClick={this.handleOnCancelButton}>Cancel</button>
+        </form>
       </div>
 
     if (this.props.editId) {
