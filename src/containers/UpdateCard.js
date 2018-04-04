@@ -40,15 +40,20 @@ class UpdateCard extends Component {
   render() {  
     //if editid is set to a number
     let editForm = 
-      <div className="update-card-form">
+      <div className="card-form">
         <br />
         <form onSubmit={this.handleOnSubmit}>
-        <h3>Update Task</h3>
-          <input type="text"
+        <h3>Update Card</h3>
+        <div className="title-input-row">
+          <label>Title :</label>
+          <input className="title" type="text"
             name="title"
             value={this.state.title}
             onChange={this.handleOnChange}
           />
+        </div>
+        <div className="input-row">
+        <label>Priority :</label>
           <select
             name="priority"
             value={this.state.priority}
@@ -60,6 +65,9 @@ class UpdateCard extends Component {
             <option value="high">High</option>
             <option value="blocker">Blocker</option>
           </select>
+        </div>
+        <div className="input-row">
+        <label>Status :</label>
           <select
             name="status"
             value={this.state.status}
@@ -70,20 +78,31 @@ class UpdateCard extends Component {
             <option value="in-progress">In-Progress</option>
             <option value="done">Done</option>
           </select>
+        </div>
+        <div className="input-row">
+        <label>Created By :</label>
           <input type="text"
             name="created_by"
             placeholder="created_by"
             value={this.state.created_by}
             onChange={this.handleOnChange}
           />
+        </div>
+        <div className="input-row">
+        <label>Assigned To :</label>
           <input type="text"
             name="assigned_to"
             placeholder="assigned_to"
             value={this.state.assigned_to}
             onChange={this.handleOnChange}
           />
-          <input type="submit" value="Submit"/>
-        <button onClick={this.handleOnCancelButton}>Cancel</button>
+        </div>
+        <div className="submit-input-row">
+          <button className="submit-input" type="submit" value="Submit">Submit</button>
+        </div>
+        <div className="submit-input-row">
+        <button className="cancel-button" onClick={this.handleOnCancelButton}>Cancel</button>
+        </div>
         </form>
       </div>
 
