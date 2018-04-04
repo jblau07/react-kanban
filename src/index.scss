@@ -8,19 +8,91 @@ body {
   padding-top: 8px;
   display: flex;
   flex-direction: column;
+
   h1 {
     font-size: 40px;
     font-weight: bold;
     display: flex;
     justify-content: center;
-    // font-family: "Coustard", serif;
   }
-  .update-card-form {
+
+  .card-form {
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
-    flex-flow: column;
-    flex-direction: column;
+    border: 2px solid #336600;
+    width: 340px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 540px;
+    background-color: #b3ffcc;
+    box-shadow: 5px 10px 8px #33334d;
+
+    
+    h3 {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .title-input-row {
+      padding-bottom: 10px; 
+
+      label {
+        padding-right: 5px;
+      }
+      
+      .title {
+        height: 50px;  
+        width: 250px;   
+      }
+    }
+
+    input {
+      font-family: "Coustard", serif;
+      width: 200px;
+    }
+
+    select {
+      width: 200px;    
+      font-family: "Coustard", serif;
+    }
+    
+    .input-row {
+      display: flex;
+      padding-bottom: 10px;
+      padding-left: 2px;
+
+      label {
+        padding-right: 5px;
+      }
+    }
+
+    .submit-input-row {
+      display: flex;
+      justify-content: center;
+
+      .submit-input {
+        display: flex;
+        justify-content: center;
+        padding: 10px 24px;
+        text-align: center;
+      }
+
+      .submit-input:hover {
+        background-color: #66CDAA;
+      }
+
+      .cancel-button {
+        display: flex;
+        justify-content: center;
+        padding: 10px 24px;
+        text-align: center;
+      }
+
+      .cancel-button:hover {
+        background-color: #66CDAA;
+      }
+    }   
   }
 }
 
@@ -49,11 +121,13 @@ body {
         text-align: center;
       }
   }
+
   .DoneColumn {
     padding-left: 100px;
     padding-right: 100px;
     border-right: 6px solid black;
-      .done-header {
+     
+    .done-header {
         text-align: center;
       }
   }
@@ -91,7 +165,6 @@ body {
         padding: 10px 24px;
         text-align: center;
         font-family: "Coustard", serif;
-
       }
 
       .delete-button:hover {

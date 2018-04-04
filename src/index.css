@@ -11,12 +11,56 @@ body {
     font-weight: bold;
     display: flex;
     justify-content: center; }
-  .App-title .update-card-form {
+  .App-title .card-form {
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
-    flex-flow: column;
-    flex-direction: column; }
+    border: 2px solid #336600;
+    width: 340px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 540px;
+    background-color: #b3ffcc;
+    box-shadow: 5px 10px 8px #33334d; }
+    .App-title .card-form h3 {
+      display: flex;
+      justify-content: center; }
+    .App-title .card-form .title-input-row {
+      padding-bottom: 10px; }
+      .App-title .card-form .title-input-row label {
+        padding-right: 5px; }
+      .App-title .card-form .title-input-row .title {
+        height: 50px;
+        width: 250px; }
+    .App-title .card-form input {
+      font-family: "Coustard", serif;
+      width: 200px; }
+    .App-title .card-form select {
+      width: 200px;
+      font-family: "Coustard", serif; }
+    .App-title .card-form .input-row {
+      display: flex;
+      padding-bottom: 10px;
+      padding-left: 2px; }
+      .App-title .card-form .input-row label {
+        padding-right: 5px; }
+    .App-title .card-form .submit-input-row {
+      display: flex;
+      justify-content: center; }
+      .App-title .card-form .submit-input-row .submit-input {
+        display: flex;
+        justify-content: center;
+        padding: 10px 24px;
+        text-align: center; }
+      .App-title .card-form .submit-input-row .submit-input:hover {
+        background-color: #66CDAA; }
+      .App-title .card-form .submit-input-row .cancel-button {
+        display: flex;
+        justify-content: center;
+        padding: 10px 24px;
+        text-align: center; }
+      .App-title .card-form .submit-input-row .cancel-button:hover {
+        background-color: #66CDAA; }
 
 .new-card-form {
   margin-bottom: 20px; }
